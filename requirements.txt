@@ -19,6 +19,7 @@ unstructured==0.17.2              # used by UnstructuredHTMLLoader (missing in o
 fastapi==0.115.9
 uvicorn==0.34.3                   # the server that runs FastAPI
 python-multipart==0.0.20          # FastAPI needs this to receive file uploads
+chardet<6                         # requests 2.32.4 warns with chardet 7 (pulled in by unstructured)
 
 # --- Frontend ---
 streamlit==1.45.1
