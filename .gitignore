@@ -1,0 +1,23 @@
+# Secrets
+.env
+
+# Virtual environment
+.venv/
+venv/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Runtime data created by the app
+*.db
+chroma_db/
+*.log
+temp_*
+
+# Test and editor files
+.pytest_cache/
+.coverage
+.vscode/
+.idea/
+.DS_Store

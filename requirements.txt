@@ -1,0 +1,28 @@
+# --- LLM orchestration (LangChain) ---
+langchain==0.3.25                 # history-aware retriever + retrieval chains
+langchain-core==0.3.65            # prompts, messages, Document class
+langchain-openai==0.3.23          # ChatOpenAI + OpenAIEmbeddings
+langchain-community==0.3.25       # document loaders (PDF, DOCX, HTML)
+langchain-text-splitters==0.3.8   # RecursiveCharacterTextSplitter
+langchain-chroma==0.2.4           # connects LangChain to Chroma
+
+# --- Vector database ---
+chromadb==1.0.12
+posthog<6                         # chromadb 1.0.12 prints telemetry errors with posthog 6+
+
+# --- Document parsing ---
+pypdf==5.6.0                      # used by PyPDFLoader
+docx2txt==0.9                     # used by Docx2txtLoader
+unstructured==0.17.2              # used by UnstructuredHTMLLoader (missing in original)
+
+# --- Backend ---
+fastapi==0.115.9
+uvicorn==0.34.3                   # the server that runs FastAPI
+python-multipart==0.0.20          # FastAPI needs this to receive file uploads
+
+# --- Frontend ---
+streamlit==1.45.1
+requests==2.32.4                  # Streamlit -> FastAPI HTTP calls (missing in original)
+
+# --- Config ---
+python-dotenv==1.1.0              # loads .env (missing in original)
